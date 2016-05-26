@@ -1,0 +1,23 @@
+{
+  "name": "asu-email-signature",
+  "version": "1.0.0",
+  "description": "An ASU email signature branding tool.",
+  "main": "index.js",
+  "dependencies": {
+    "gulp-concat": "^2.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ASU-CLAS/asu-email-signature.git"
+  },
+  "author": "Sebastian Nievas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ASU-CLAS/asu-email-signature/issues"
+  },
+  "homepage": "https://github.com/ASU-CLAS/asu-email-signature#readme"
+}

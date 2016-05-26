@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ASU Email Signature Tool</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  <script type="text/javascript" src="./asu-email-signature.js"></script>
+  <link rel="stylesheet" type="text/css" href="./asu-email-signature.css" />
+</head>
+<body>
+
+  <!-- Begin angular app markup -->
+  <div ng-app="emailSignatureBranding">
+    <div class="email-signature-container" ng-controller="Controller">
+     <h2>Enter Your Details</h2>
+      <fieldset>
+        <input ng-model="name" placeholder="Full Name">
+        <input ng-model="title" placeholder="Title">
+        <input ng-model="university" placeholder="University">
+        <input ng-model="unit" placeholder="Unit">
+        <input ng-model="address1" placeholder="Address Line 1">
+        <input ng-model="address2" placeholder="Address Line 2">
+        <input ng-model="address3" placeholder="Address Line 3">
+        <input ng-model="phone_input" ng-change="checkPhone()" placeholder="Phone Number">
+        <input ng-model="mobile_input" ng-change="checkMobile()" placeholder="Mobile Number (optional)">
+      </fieldset>
+
+      <h2>PC Signature</h2>
+      <div class="email-signature pc">
+        <div class="name-line">
+          {{ name }}
+        </div>
+        <div class="title-line">
+          {{ title }}
+        </div>
+        <div class="university-line">
+          {{ university }}
+        </div>
+        <div class="unit-line">
+          {{ unit }}
+        </div>
+        <div class="address-lines">
+          <span id="address1">{{ address1 }}</span>
+          <span id="address2">{{ address2 }}</span>
+          <span id="address3">{{ address3 }}</span>
+        </div>
+        <div class="phone-line">
+          {{ phone }} {{ mobile }}
+        </div>
+      </div>
+
+      <h2>Mac Signature</h2>
+      <div class="email-signature mac">
+        <div class="name-line">
+          {{ name }}
+        </div>
+        <div class="title-line">
+          {{ title }}
+        </div>
+        <div class="university-line">
+          {{ university }}
+        </div>
+        <div class="unit-line">
+          {{ unit }}
+        </div>
+        <div class="address-lines">
+          <span id="address1">{{ address1 }}</span>
+          <span id="address2">{{ address2 }}</span>
+          <span id="address3">{{ address3 }}</span>
+        </div>
+        <div class="phone-line">
+          {{ phone }} {{ mobile }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End angular app markup -->
+  
+</body>
+</html>

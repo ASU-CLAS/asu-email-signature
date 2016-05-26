@@ -1,0 +1,61 @@
+$brand_black: #000;
+$brand_grey: #5C6670;
+$brand_red: #8C1D40;
+$font-family_1: Arial;
+
+.email-signature {
+  font-family: $font-family_1;
+  margin-bottom: 50px;
+  border: 3px solid #dedede;
+  padding: 30px;
+  .name-line {
+    color: $brand_black;
+    font-weight: bold;
+  }
+  .title-line {
+    color: $brand_grey;
+  }
+  .university-line {
+    color: $brand_red;
+    font-weight: bold;
+  }
+  .unit-line {
+    color: $brand_grey;
+    font-weight: bold;
+  }
+  .address-lines {
+    color: $brand_grey;
+    span {
+      display: block;
+    }
+  }
+  .phone-line {
+    color: $brand_black;
+    font-weight: bold;
+  }
+}
+.email-signature.pc {
+  font-size: 8pt;
+  .name-line {
+    font-size: 10pt;
+  }
+}
+.email-signature.mac {
+  font-size: 10pt;
+  .name-line {
+    font-size: 13pt;
+  }
+}
+.email-signature-container {
+  fieldset {
+    margin: 20px 0;
+    padding: 20px;
+    border: 3px solid #dedede;
+    input {
+      padding: 8px;
+      display: block;
+      margin-bottom: 5px;
+      width: 66%;
+    }
+  }
+}

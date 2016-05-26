@@ -1,0 +1,43 @@
+.email-signature {
+  font-family: Arial;
+  margin-bottom: 50px;
+  border: 3px solid #dedede;
+  padding: 30px; }
+  .email-signature .name-line {
+    color: #000;
+    font-weight: bold; }
+  .email-signature .title-line {
+    color: #5C6670; }
+  .email-signature .university-line {
+    color: #8C1D40;
+    font-weight: bold; }
+  .email-signature .unit-line {
+    color: #5C6670;
+    font-weight: bold; }
+  .email-signature .address-lines {
+    color: #5C6670; }
+    .email-signature .address-lines span {
+      display: block; }
+  .email-signature .phone-line {
+    color: #000;
+    font-weight: bold; }
+
+.email-signature.pc {
+  font-size: 8pt; }
+  .email-signature.pc .name-line {
+    font-size: 10pt; }
+
+.email-signature.mac {
+  font-size: 10pt; }
+  .email-signature.mac .name-line {
+    font-size: 13pt; }
+
+.email-signature-container fieldset {
+  margin: 20px 0;
+  padding: 20px;
+  border: 3px solid #dedede; }
+  .email-signature-container fieldset input {
+    padding: 8px;
+    display: block;
+    margin-bottom: 5px;
+    width: 66%; }
