@@ -1,14 +1,16 @@
 angular.module('emailSignatureBranding', [])
   .controller('Controller', ['$scope', function($scope) {
     $scope.name       = 'Full Name';
-    $scope.title      = '';
-    $scope.university = 'Arizona State University';
-    $scope.unit       = 'College of Liberal Arts and Sciences';
-    $scope.address1   = 'P.O. Box 876505';
-    $scope.address2   = '';
-    $scope.address3   = 'Tempe, AZ 85287-6505';
+    $scope.title      = 'Title';
     $scope.phone      = '';
     $scope.mobile     = '';
+    $scope.fax     = '';
+    $scope.selectables = [
+        { label: 'Alameda', value: 'alameda.gif'},
+        { label:'Brookside', value:'brookside.gif'},
+        { label:'Riverbend', value:'riverbend.gif'}
+
+    ];
 
     $scope.checkMobile = function() {
       $scope.mobile = '';
@@ -18,6 +20,18 @@ angular.module('emailSignatureBranding', [])
 
         if ($scope.phone == undefined || $scope.phone == '') {
           $scope.mobile = $scope.mobile.replace(/^\| /, '');
+        }
+      }
+    }
+    
+    $scope.checkFax = function() {
+      $scope.fax = '';
+
+      if ($scope.fax_input) {
+        $scope.fax = '| F: ' + $scope.fax_input;
+
+        if ($scope.fax == undefined || $scope.fax == '') {
+          $scope.fax = $scope.fax.replace(/^\| /, '');
         }
       }
     }
@@ -33,5 +47,11 @@ angular.module('emailSignatureBranding', [])
     $scope.checkPhoneNumbers = function() {
       $scope.checkPhone();
       $scope.checkMobile();
+      $scope.checkFax();
     }
+    
+    
   }]);
+
+
+
