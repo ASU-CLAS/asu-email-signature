@@ -14,63 +14,48 @@
      <h2>Enter Your Details</h2>
       <fieldset>
         <input ng-model="name" placeholder="Full Name">
-        <input ng-model="title" placeholder="Title">
-        <input ng-model="university" placeholder="University">
-        <input ng-model="unit" placeholder="Unit">
-        <input ng-model="address1" placeholder="Address Line 1">
-        <input ng-model="address2" placeholder="Address Line 2">
-        <input ng-model="address3" placeholder="Address Line 3">
+        <input ng-model="title" placeholder="Title">       
         <input ng-model="phone_input" ng-change="checkPhoneNumbers()" placeholder="Phone Number">
         <input ng-model="mobile_input" ng-change="checkPhoneNumbers()" placeholder="Mobile Number (optional)">
-      </fieldset>
+        <input ng-model="fax_input" ng-change="checkPhoneNumbers()" placeholder="Fax Number (optional)">
+        <select
+       ng-model="selectedItem" 
+       ng-options="S.value as S.label for S in selectables" ng-change="fun()"><option value="" selected="selected">Choose a pharmacy</option>
+    </select>
+    </fieldset>
+   
 
-      <h2>PC Signature</h2>
-      <div class="email-signature pc">
-        <div class="name-line">
-          {{ name }}
-        </div>
-        <div class="title-line">
-          {{ title }}
-        </div>
-        <div class="university-line">
-          {{ university }}
-        </div>
-        <div class="unit-line">
-          {{ unit }}
-        </div>
-        <div class="address-lines">
-          <span id="address1">{{ address1 }}</span>
-          <span id="address2">{{ address2 }}</span>
-          <span id="address3">{{ address3 }}</span>
-        </div>
-        <div class="phone-line">
-          {{ phone }} {{ mobile }}
-        </div>
-      </div>
-
-      <h2>Mac Signature</h2>
-      <div class="email-signature mac">
-        <div class="name-line">
-          {{ name }}
-        </div>
-        <div class="title-line">
-          {{ title }}
-        </div>
-        <div class="university-line">
-          {{ university }}
-        </div>
-        <div class="unit-line">
-          {{ unit }}
-        </div>
-        <div class="address-lines">
-          <span id="address1">{{ address1 }}</span>
-          <span id="address2">{{ address2 }}</span>
-          <span id="address3">{{ address3 }}</span>
-        </div>
-        <div class="phone-line">
-          {{ phone }} {{ mobile }}
-        </div>
-      </div>
+        
+        <table width="400" cellpadding="0" cellspacing="0" align="left">
+        <tr>
+            <td width="400" style="font-family:'arial narrow', helvetica, arial, sans-serif; color:#777;">
+                <span style="font-size: 14px;">
+                    <span id="name" style="font-weight:normal;color:#30C2DC;line-height:20px font-family:'arial narrow', helvetica, arial, sans-serif;">{{ name }}</span>&nbsp;<span id="title" style=" color:#777;">{{ title }}</span>
+                </span>
+            </td>
+            <tr>
+                <td style="font-family:'arial narrow', helvetica, arial, sans-serif; color:#777;">
+                    <span id="contact" style="font-size:12px;line-height:9px">{{ phone }} {{ mobile }} {{ fax }}</span></td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="400" cellpadding="0" cellspacing="0" align="left" style="font-size: 8px !important;">
+                        <tr>
+                            <td width="90" height="7" colspan="3" style="line-height:7px; font-size:.1px;"> &nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td valign="middle" width="90"><img style="width:100% !important;" src="{{selectedItem}}"></td>
+                            <td width="7"></td>
+                            <td valign="middle" style="font-family:'arial narrow', helvetica, arial, sans-serif; color:#777;"><span style="font-size:8px;line-height:10px">
+                  Notice: This e-mail message is confidential and is intended only for the use of the individual and/or entity identified in the address line of this message. If you have received this message in error, or are not the named recipient(s), please notify us immediately by telephone at 855.683.9089</span></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+    </table>
+        
+      
+      
     </div>
   </div>
   <!-- End angular app markup -->
